@@ -25,8 +25,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-      run: |
-        - pip install tox-travis
+      run: | 
         - pip install coveralls
     - name: Lint with flake8
       run: |
