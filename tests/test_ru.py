@@ -170,32 +170,32 @@ class numinwordsRUTest(TestCase):
         )
         self.assertEqual(
             numinwords(10111, lang='ru', to='currency', currency='EUR',
-                      separator=' и'),
+                       separator=' и'),
             'сто один евро и одиннадцать центов'
         )
         self.assertEqual(
             numinwords(10121, lang='ru', to='currency', currency='RUB',
-                      separator=' и'),
+                       separator=' и'),
             'сто один рубль и двадцать одна копейка'
         )
         self.assertEqual(
             numinwords(10122, lang='ru', to='currency', currency='RUB',
-                      separator=' и'),
+                       separator=' и'),
             'сто один рубль и двадцать две копейки'
         )
         self.assertEqual(
             numinwords(10121, lang='ru', to='currency', currency='EUR',
-                      separator=' и'),
+                       separator=' и'),
             'сто один евро и двадцать один цент'
         )
         self.assertEqual(
             numinwords(-1251985, lang='ru', to='currency', currency='EUR',
-                      cents=False),
+                       cents=False),
             'минус двенадцать тысяч пятьсот девятнадцать евро, 85 центов'
         )
         self.assertEqual(
             numinwords('38.4', lang='ru', to='currency', separator=' и',
-                      cents=False, currency='EUR'),
+                       cents=False, currency='EUR'),
             "тридцать восемь евро и 40 центов"
         )
         self.assertEqual(

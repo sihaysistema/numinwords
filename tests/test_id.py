@@ -25,7 +25,8 @@ class numinwordsIDTest(TestCase):
         self.assertEqual(numinwords(10, lang='id'), "sepuluh")
         self.assertEqual(numinwords(11, lang='id'), "sebelas")
         self.assertEqual(numinwords(108, lang='id'), "seratus delapan")
-        self.assertEqual(numinwords(1075, lang='id'), "seribu tujuh puluh lima")
+        self.assertEqual(numinwords(1075, lang='id'),
+                         "seribu tujuh puluh lima")
         self.assertEqual(
             numinwords(1087231, lang='id'),
             "satu juta delapan puluh tujuh ribu dua ratus tiga puluh satu"
@@ -59,4 +60,5 @@ class numinwordsIDTest(TestCase):
         self.assertRaises(TypeError, numinwords, -12, ordinal=True, lang='id')
 
     def test_ordinal_for_floating_number(self):
-        self.assertRaises(TypeError, numinwords, 3.243, ordinal=True, lang='id')
+        self.assertRaises(TypeError, numinwords, 3.243,
+                          ordinal=True, lang='id')

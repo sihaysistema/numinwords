@@ -106,12 +106,12 @@ class numinwordsPLTest(TestCase):
         )
         self.assertEqual(
             numinwords(10111, lang='pl', to='currency', currency='EUR',
-                      separator=' i'),
+                       separator=' i'),
             "sto jeden euro i jedenaście centów"
         )
         self.assertEqual(
             numinwords(10121, lang='pl', to='currency', currency='PLN',
-                      separator=' i'),
+                       separator=' i'),
             "sto jeden złotych i dwadzieścia jeden groszy"
         )
         self.assertEqual(
@@ -120,7 +120,7 @@ class numinwordsPLTest(TestCase):
         )
         self.assertEqual(
             numinwords(123.50, lang='pl', to='currency', currency='PLN',
-                      separator=' i'),
+                       separator=' i'),
             "sto dwadzieścia trzy złote i pięćdziesiąt groszy"
         )
         self.assertEqual(

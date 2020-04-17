@@ -29,7 +29,8 @@ class numinwordsSLTest(TestCase):
         self.assertEqual(numinwords(7, ordinal=True, lang='sl'), "sedmi")
         self.assertEqual(numinwords(8, ordinal=True, lang='sl'), "osmi")
         self.assertEqual(numinwords(12, ordinal=True, lang='sl'), "dvanajsti")
-        self.assertEqual(numinwords(17, ordinal=True, lang='sl'), "sedemnajsti")
+        self.assertEqual(numinwords(
+            17, ordinal=True, lang='sl'), "sedemnajsti")
 
     def test_ordinal_more_than_twenty(self):
         self.assertEqual(
@@ -73,7 +74,8 @@ class numinwordsSLTest(TestCase):
         self.assertEqual(numinwords(106, ordinal=True, lang='sl'), "stošesti")
         self.assertEqual(numinwords(200, ordinal=True, lang='sl'), "dvestoti")
         self.assertEqual(numinwords(1000, ordinal=True, lang='sl'), "tisoči")
-        self.assertEqual(numinwords(1001, ordinal=True, lang='sl'), "tisočprvi")
+        self.assertEqual(numinwords(
+            1001, ordinal=True, lang='sl'), "tisočprvi")
         self.assertEqual(numinwords(1002, ordinal=True, lang='sl'),
                          "tisočdrugi")
         self.assertEqual(numinwords(1003, ordinal=True, lang='sl'),
@@ -205,4 +207,5 @@ class numinwordsSLTest(TestCase):
         self.assertRaises(TypeError, numinwords, -12, ordinal=True, lang='sl')
 
     def test_ordinal_for_floating_numbers(self):
-        self.assertRaises(TypeError, numinwords, 2.453, ordinal=True, lang='sl')
+        self.assertRaises(TypeError, numinwords, 2.453,
+                          ordinal=True, lang='sl')

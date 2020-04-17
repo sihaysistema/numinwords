@@ -239,7 +239,8 @@ class numinwordsPTBRTest(TestCase):
             'ducentésimo quinquagésimo milésimo quinquagésimo'
         )
         self.assertEqual(
-            numinwords(6000000, lang='pt_BR', ordinal=True), 'sexto milionésimo'
+            numinwords(6000000, lang='pt_BR', ordinal=True),
+            'sexto milionésimo'
         )
         self.assertEqual(
             numinwords(19000000000, lang='pt_BR', ordinal=True),

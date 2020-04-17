@@ -131,7 +131,8 @@ class numinwordsDETest(TestCase):
         self.assertRaises(TypeError, numinwords, -12, ordinal=True, lang='de')
 
     def test_ordinal_for_floating_numbers(self):
-        self.assertRaises(TypeError, numinwords, 2.453, ordinal=True, lang='de')
+        self.assertRaises(TypeError, numinwords, 2.453, ordinal=True,
+                          lang='de')
 
     def test_currency_eur(self):
         for test in TEST_CASES_TO_CURRENCY_EUR:

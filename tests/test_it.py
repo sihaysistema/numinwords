@@ -125,7 +125,8 @@ class numinwordsITTest(TestCase):
             numinwords(1200000, lang="it"), "un milione e duecentomila"
         )
         self.assertEqual(numinwords(3000000, lang="it"), "tre milioni")
-        self.assertEqual(numinwords(3000005, lang="it"), "tre milioni e cinque")
+        self.assertEqual(numinwords(3000005, lang="it"),
+                         "tre milioni e cinque")
         self.assertEqual(
             numinwords(3800000, lang="it"), "tre milioni e ottocentomila"
         )
@@ -193,7 +194,8 @@ class numinwordsITTest(TestCase):
         )
 
     def test_nth_1000_to_999999(self):
-        self.assertEqual(numinwords(1000, lang="it", ordinal=True), "millesimo")
+        self.assertEqual(numinwords(
+            1000, lang="it", ordinal=True), "millesimo")
         self.assertEqual(
             numinwords(1001, lang="it", ordinal=True), "milleunesimo"
         )
@@ -225,7 +227,8 @@ class numinwordsITTest(TestCase):
             "un miliardo e unesimo"
         )
         self.assertEqual(
-            numinwords(123456789012345678901234567890, lang="it", ordinal=True),
+            numinwords(123456789012345678901234567890, lang="it",
+                       ordinal=True),
             "centoventitré quadriliardi, quattrocentocinquantasei "
             "quadrilioni, settecentottantanove triliardi, dodici trilioni, "
             "trecentoquarantacinque biliardi, seicentosettantotto bilioni, "

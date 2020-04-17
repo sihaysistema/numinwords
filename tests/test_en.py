@@ -70,64 +70,66 @@ class numinwordsENTest(TestCase):
 
     def test_overflow(self):
         with self.assertRaises(OverflowError):
-            numinwords("1000000000000000000000000000000000000000000000000000000"
-                      "0000000000000000000000000000000000000000000000000000000"
-                      "0000000000000000000000000000000000000000000000000000000"
-                      "0000000000000000000000000000000000000000000000000000000"
-                      "0000000000000000000000000000000000000000000000000000000"
-                      "00000000000000000000000000000000")
+            numinwords(
+                "1000000000000000000000000000000000000000000000000000000"
+                "0000000000000000000000000000000000000000000000000000000"
+                "0000000000000000000000000000000000000000000000000000000"
+                "0000000000000000000000000000000000000000000000000000000"
+                "0000000000000000000000000000000000000000000000000000000"
+                "00000000000000000000000000000000"
+            )
 
     def test_to_currency(self):
         self.assertEqual(
             numinwords('38.4', lang='en', to='currency', separator=' and',
-                      cents=False, currency='USD'),
+                       cents=False, currency='USD'),
             "thirty-eight dollars and 40 cents"
         )
         self.assertEqual(
             numinwords('0', lang='en', to='currency', separator=' and',
-                      cents=False, currency='USD'),
+                       cents=False, currency='USD'),
             "zero dollars and 00 cents"
         )
 
         self.assertEqual(
             numinwords('1.01', lang='en', to='currency', separator=' and',
-                      cents=True, currency='USD'),
+                       cents=True, currency='USD'),
             "one dollar and one cent"
         )
 
         self.assertEqual(
             numinwords('4778.00', lang='en', to='currency', separator=' and',
-                      cents=True, currency='USD', adjective=True),
+                       cents=True, currency='USD', adjective=True),
             'four thousand, seven hundred and seventy-eight US dollars'
             ' and zero cents')
 
         self.assertEqual(
             numinwords('4778.00', lang='en', to='currency', separator=' and',
-                      cents=True, currency='USD'),
+                       cents=True, currency='USD'),
             'four thousand, seven hundred and seventy-eight dollars and'
             ' zero cents')
 
         self.assertEqual(
             numinwords('1.1', lang='en', to='currency', separator=' and',
-                      cents=True, currency='MXN'),
+                       cents=True, currency='MXN'),
             "one peso and ten cents"
         )
 
         self.assertEqual(
             numinwords('158.3', lang='en', to='currency', separator=' and',
-                      cents=True, currency='MXN'),
+                       cents=True, currency='MXN'),
             "one hundred and fifty-eight pesos and thirty cents"
         )
 
         self.assertEqual(
             numinwords('2000.00', lang='en', to='currency', separator=' and',
-                      cents=True, currency='MXN'),
+                       cents=True, currency='MXN'),
             "two thousand pesos and zero cents"
         )
 
         self.assertEqual(
             numinwords('4.01', lang='en', to='currency', separator=' and',
-                      cents=True, currency='MXN'),
+                       cents=True, currency='MXN'),
             "four pesos and one cent"
         )
 
@@ -174,7 +176,7 @@ class numinwordsENTest(TestCase):
         self.assertEqual(numinwords(1, lang='en', to='year', suffix='AD'),
                          'one AD')
         self.assertEqual(numinwords(66, lang='en', to='year',
-                                   suffix='m.y.a.'),
+                                    suffix='m.y.a.'),
                          'sixty-six m.y.a.')
         self.assertEqual(numinwords(-66000000, lang='en', to='year'),
                          'sixty-six million BC')

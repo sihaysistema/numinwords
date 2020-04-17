@@ -219,12 +219,12 @@ class numinwordsSRTest(TestCase):
         self.assertEqual(
             'sto jedna rublja i dvadeset dve kopejke',
             numinwords(10122, lang='sr', to='currency', currency='RUB',
-                      separator=' i')
+                       separator=' i')
         )
         self.assertEqual(
             'sto jedan evro i dvadeset jedan cent',
             numinwords(10121, lang='sr', to='currency', currency='EUR',
-                      separator=' i'),
+                       separator=' i'),
         )
         self.assertEqual(
             'minus dvanaest hiljada petsto devetnaest evra, 85 centi',
@@ -239,5 +239,5 @@ class numinwordsSRTest(TestCase):
         self.assertEqual(
             "trideset osam evra i 40 centi",
             numinwords('38.4', lang='sr', to='currency', separator=' i',
-                      cents=False, currency='EUR'),
+                       cents=False, currency='EUR'),
         )

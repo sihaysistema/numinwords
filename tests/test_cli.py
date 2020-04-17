@@ -30,7 +30,7 @@ class CliCaller(object):
 
     def __init__(self):
         self.cmd = os.path.realpath(os.path.join(os.path.dirname(__file__),
-                                    "..", "bin", "numinwords"))
+                                                 "..", "bin", "numinwords"))
         self.cmd_list = ["python", self.cmd]
 
     def run_cmd(self, *args):

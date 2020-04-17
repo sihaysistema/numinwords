@@ -93,7 +93,7 @@ class numinwordsLTTest(TestCase):
         # EUR
         self.assertEqual(
             numinwords(-1251981, lang='lt', to='currency', currency='EUR',
-                      cents=False),
+                       cents=False),
             'minus dvylika tūkstančių penki šimtai devyniolika eurų, '
             '81 centas'
         )
@@ -114,7 +114,7 @@ class numinwordsLTTest(TestCase):
         # USD
         self.assertEqual(
             numinwords(-1281, lang='lt', to='currency', currency='USD',
-                      cents=False),
+                       cents=False),
             'minus dvylika dolerių, 81 centas'
         )
         self.assertEqual(
@@ -128,7 +128,7 @@ class numinwordsLTTest(TestCase):
         # GBP
         self.assertEqual(
             numinwords(-1281, lang='lt', to='currency', currency='GBP',
-                      cents=False),
+                       cents=False),
             'minus dvylika svarų sterlingų, 81 pensas'
         )
         self.assertEqual(
@@ -142,7 +142,7 @@ class numinwordsLTTest(TestCase):
         # PLN
         self.assertEqual(
             numinwords(-1281, lang='lt', to='currency', currency='PLN',
-                      cents=False),
+                       cents=False),
             'minus dvylika zlotų, 81 grašis'
         )
         self.assertEqual(
@@ -156,7 +156,7 @@ class numinwordsLTTest(TestCase):
         # RUB
         self.assertEqual(
             numinwords(-1281, lang='lt', to='currency', currency='RUB',
-                      cents=False),
+                       cents=False),
             'minus dvylika rublių, 81 kapeika'
         )
         self.assertEqual(

@@ -122,6 +122,5 @@ class numinwordsENTest(TestCase):
         for test in TEST_CASES_TO_CURRENCY_FRF:
             self.assertEqual(
                 numinwords(test[0], lang='fr_CH', to='currency',
-                          currency='FRF'),
-                test[1]
+                           currency='FRF'), test[1]
             )

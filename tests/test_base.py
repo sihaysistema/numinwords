@@ -52,9 +52,9 @@ class Num2WordBaseTest(TestCase):
         self.assertEqual(
             self.base.title("one"),
             "one"
-            )
+        )
         self.base.is_title = True
         self.assertEqual(
             self.base.title("one"),
             "One"
-            )
+        )

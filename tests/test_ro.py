@@ -108,12 +108,14 @@ class numinwordsROTest(TestCase):
 
     def test_overflow(self):
         with self.assertRaises(OverflowError):
-            numinwords("100000000000000000000000000000000000000000000000000000"
-                      "000000000000000000000000000000000000000000000000000000"
-                      "000000000000000000000000000000000000000000000000000000"
-                      "000000000000000000000000000000000000000000000000000000"
-                      "000000000000000000000000000000000000000000000000000000"
-                      "0000000000000000000000000000000000000")
+            numinwords(
+                "100000000000000000000000000000000000000000000000000000"
+                "000000000000000000000000000000000000000000000000000000"
+                "000000000000000000000000000000000000000000000000000000"
+                "000000000000000000000000000000000000000000000000000000"
+                "000000000000000000000000000000000000000000000000000000"
+                "0000000000000000000000000000000000000"
+            )
 
     def test_to_currency(self):
         self.assertEqual(
@@ -188,7 +190,8 @@ class numinwordsROTest(TestCase):
         self.assertEqual(numinwords(-44, lang='ro', to='year'),
                          u'patruzeci și patru î.Hr.')
         self.assertEqual(numinwords(-44, lang='ro', to='year',
-                         suffix=u'î.e.n.'), u'patruzeci și patru î.e.n.')
+                                    suffix=u'î.e.n.'),
+                         u'patruzeci și patru î.e.n.')
         self.assertEqual(numinwords(1, lang='ro', to='year', suffix='d.Hr.'),
                          u'unu d.Hr.')
         self.assertEqual(numinwords(-66000000, lang='ro', to='year'),

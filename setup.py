@@ -36,7 +36,7 @@ CLASSIFIERS = [
 ]
 
 LONG_DESC = open('README.rst', 'rt', encoding="utf-8").read() + '\n\n' + \
-            open('CHANGES.rst', 'rt', encoding="utf-8").read()
+    open('CHANGES.rst', 'rt', encoding="utf-8").read()
 
 
 def find_version(fname):
@@ -59,7 +59,8 @@ def find_version(fname):
 setup(
     name=PACKAGE_NAME,
     version=find_version("bin/numinwords"),
-    description='Modules to convert numbers to words. Easily extensible.',
+    description='Modules to convert numbers to words. Easily extensible.\
+                Guatemala test',
     long_description=LONG_DESC,
     license='LGPL',
     author='Taro Ogawa <tso at users sourceforge net>',

@@ -28,7 +28,8 @@ class numinwordsNLTest(TestCase):
         self.assertEqual(numinwords(7, ordinal=True, lang='nl'), "zevende")
         self.assertEqual(numinwords(8, ordinal=True, lang='nl'), "achtste")
         self.assertEqual(numinwords(12, ordinal=True, lang='nl'), "twaalfde")
-        self.assertEqual(numinwords(17, ordinal=True, lang='nl'), "zeventiende")
+        self.assertEqual(numinwords(17, ordinal=True, lang='nl'),
+                         "zeventiende")
 
     def test_ordinal_more_than_twenty(self):
         self.assertEqual(
@@ -36,7 +37,8 @@ class numinwordsNLTest(TestCase):
         )
 
     def test_ordinal_at_crucial_number(self):
-        self.assertEqual(numinwords(100, ordinal=True, lang='nl'), "honderdste")
+        self.assertEqual(numinwords(100, ordinal=True, lang='nl'),
+                         "honderdste")
         self.assertEqual(
             numinwords(1000, ordinal=True, lang='nl'), "duizendste"
         )
@@ -65,52 +67,53 @@ class numinwordsNLTest(TestCase):
         self.assertRaises(TypeError, numinwords, -12, ordinal=True, lang='nl')
 
     def test_ordinal_for_floating_numbers(self):
-        self.assertRaises(TypeError, numinwords, 2.453, ordinal=True, lang='nl')
+        self.assertRaises(TypeError, numinwords, 2.453, ordinal=True,
+                          lang='nl')
 
     def test_to_currency_eur(self):
         self.assertEqual(
             numinwords('38.4', lang='nl', to='currency', separator=' en',
-                      cents=False, currency='EUR'),
+                       cents=False, currency='EUR'),
             "achtendertig euro en 40 cent"
         )
         self.assertEqual(
             numinwords('0', lang='nl', to='currency', separator=' en',
-                      cents=False, currency='EUR'),
+                       cents=False, currency='EUR'),
             "nul euro en 00 cent"
         )
 
         self.assertEqual(
             numinwords('1.01', lang='nl', to='currency', separator=' en',
-                      cents=True, currency='EUR'),
+                       cents=True, currency='EUR'),
             "één euro en één cent"
         )
 
         self.assertEqual(
             numinwords('4778.00', lang='nl', to='currency', separator=' en',
-                      cents=True, currency='EUR'),
+                       cents=True, currency='EUR'),
             'vierduizendzevenhonderdachtenzeventig euro en nul cent')
 
     def test_to_currency_usd(self):
         self.assertEqual(
             numinwords('38.4', lang='nl', to='currency', separator=' en',
-                      cents=False, currency='USD'),
+                       cents=False, currency='USD'),
             "achtendertig dollar en 40 cent"
         )
         self.assertEqual(
             numinwords('0', lang='nl', to='currency', separator=' en',
-                      cents=False, currency='USD'),
+                       cents=False, currency='USD'),
             "nul dollar en 00 cent"
         )
 
         self.assertEqual(
             numinwords('1.01', lang='nl', to='currency', separator=' en',
-                      cents=True, currency='USD'),
+                       cents=True, currency='USD'),
             "één dollar en één cent"
         )
 
         self.assertEqual(
             numinwords('4778.00', lang='nl', to='currency', separator=' en',
-                      cents=True, currency='USD'),
+                       cents=True, currency='USD'),
             'vierduizendzevenhonderdachtenzeventig dollar en nul cent')
 
     def test_pluralize(self):

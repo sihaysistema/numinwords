@@ -107,42 +107,42 @@ class numinwordsLVTest(TestCase):
 
         self.assertEqual(
             numinwords(10111, lang='lv', to='currency', separator=' un',
-                      currency='EUR'),
+                       currency='EUR'),
             "simtu viens eiro un vienpadsmit centi"
         )
         self.assertEqual(
             numinwords(10121, lang='lv', to='currency', separator=' un',
-                      currency='LVL'),
+                       currency='LVL'),
             "simtu viens lats un divdesmit viens santīms"
         )
         self.assertEqual(
             numinwords(-1251985, lang='lv', to='currency', cents=False,
-                      currency='EUR'),
+                       currency='EUR'),
             "mīnus divpadsmit tūkstoši pieci simti deviņpadsmit eiro,"
             " 85 centi"
         )
         self.assertEqual(
             numinwords('38.4', lang='lv', to='currency', separator=' un',
-                      cents=False, currency='EUR'),
+                       cents=False, currency='EUR'),
             "trīsdesmit astoņi eiro un 40 centi"
         )
 
         # EUR legal form
         self.assertEqual(
             numinwords('38.4', lang='lv', to='currency', separator=' un',
-                      cents=False, currency='EUR_LEGAL'),
+                       cents=False, currency='EUR_LEGAL'),
             "trīsdesmit astoņi euro un 40 centi"
         )
 
         self.assertEqual(
             numinwords('38.4', lang='lv', to='currency', separator=' un',
-                      cents=False, currency='USD', adjective=False),
+                       cents=False, currency='USD', adjective=False),
             "trīsdesmit astoņi dolāri un 40 centi"
         )
 
         self.assertEqual(
             numinwords('38.4', lang='lv', to='currency', separator=' un',
-                      cents=False, currency='USD', adjective=True),
+                       cents=False, currency='USD', adjective=True),
             "trīsdesmit astoņi ASV dolāri un 40 centi"
         )
 

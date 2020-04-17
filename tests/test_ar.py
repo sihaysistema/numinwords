@@ -28,7 +28,8 @@ class numinwordsARTest(TestCase):
                          'اثنان ريالان')
         self.assertEqual(numinwords(10, to='currency', lang='ar'),
                          'عشرة ريالات')
-        self.assertEqual(numinwords(100, to='currency', lang='ar'), 'مائة ريال')
+        self.assertEqual(numinwords(
+            100, to='currency', lang='ar'), 'مائة ريال')
         self.assertEqual(numinwords(652.12, to='currency', lang='ar'),
                          'ستمائة و اثنان و خمسون ريالاً و اثنتا عشرة هللة')
         self.assertEqual(numinwords(324, to='currency', lang='ar'),
@@ -100,7 +101,7 @@ class numinwordsARTest(TestCase):
 
     def test_prefix_and_suffix(self):
         self.assertEqual(numinwords(645, to='currency',
-                                   lang='ar', prefix="فقط", suffix="لاغير"),
+                                    lang='ar', prefix="فقط", suffix="لاغير"),
                          'فقط ستمائة و خمسة و أربعون ريالاً لاغير')
 
     def test_year(self):

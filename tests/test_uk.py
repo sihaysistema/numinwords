@@ -105,17 +105,17 @@ class numinwordsUKTest(TestCase):
         # )
         self.assertEqual(
             numinwords(10121, lang='uk', to='currency', currency='UAH',
-                      separator=u' та'),
+                       separator=u' та'),
             "сто одна гривня та двадцять одна копiйка"
         )
         self.assertEqual(
             numinwords(10121, lang='uk', to='currency', currency='UAH',
-                      separator=u' та'),
+                       separator=u' та'),
             "сто одна гривня та двадцять одна копiйка"
         )
         self.assertEqual(
             numinwords(10122, lang='uk', to='currency', currency='UAH',
-                      separator=u' та'),
+                       separator=u' та'),
             "сто одна гривня та двадцять двi копiйки"
         )
         # self.assertEqual(
@@ -125,11 +125,11 @@ class numinwordsUKTest(TestCase):
         # )
         self.assertEqual(
             numinwords(-1251985, lang='uk', to='currency', currency='EUR',
-                      cents=False),
+                       cents=False),
             "мiнус дванадцять тисяч п'ятсот дев'ятнадцять євро, 85 центiв"
         )
         self.assertEqual(
             numinwords('38.4', lang='uk', to='currency', separator=' и',
-                      cents=False, currency='EUR'),
+                       cents=False, currency='EUR'),
             "тридцять вiсiм євро и 40 центiв"
         )

@@ -33,7 +33,8 @@ class numinwordsKNTest(TestCase):
                          u"ಮೂವತ್ತ್ಎರಡು ಸಾವಿರ ಎರಡು ನೂರ ಹನ್ನೊಂದು")
 
     def test_cardinal_for_float_number(self):
-        self.assertEqual(numinwords(3.14, lang="kn"), u"ಮೂರು ಬಿಂದು ಒಂದು ನಾಲ್ಕು")
+        self.assertEqual(numinwords(3.14, lang="kn"),
+                         u"ಮೂರು ಬಿಂದು ಒಂದು ನಾಲ್ಕು")
         self.assertEqual(numinwords(1.61803, lang="kn"),
                          u"ಒಂದು ಬಿಂದು ಆರು ಒಂದು ಎಂಟು ಸೊನ್ನೆ ಮೂರು")
 

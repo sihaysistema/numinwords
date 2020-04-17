@@ -34,4 +34,5 @@ class numinwordsDKTest(TestCase):
         self.assertEqual(numinwords(5, to="cardinal", lang="dk"), "fem")
         self.assertEqual(numinwords(8, to="cardinal", lang="dk"), "otte")
         self.assertEqual(numinwords(18, to="cardinal", lang="dk"), "atten")
-        self.assertEqual(numinwords(45, to="cardinal", lang="dk"), "femogfyrre")
+        self.assertEqual(numinwords(
+            45, to="cardinal", lang="dk"), "femogfyrre")

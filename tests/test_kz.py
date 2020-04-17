@@ -67,7 +67,8 @@ class numinwordsKZTest(TestCase):
             "алты жүз отыз екі мың тоғыз жүз жиырма төрт теңге, елу бір тиын",
         )
         self.assertEqual(
-            numinwords(987654321.123, lang="kz", to="currency", currency="KZT"),
+            numinwords(987654321.123, lang="kz", to="currency",
+                       currency="KZT"),
             "тоғыз жүз сексен жеті миллион алты жүз елу төрт мың "
-            "үш жүз жиырма бір теңге, он екі тиын",
+            "үш жүз жиырма бір теңге, он екі тиын"
         )

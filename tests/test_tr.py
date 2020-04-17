@@ -186,6 +186,6 @@ class numinwordsTRTest(TestCase):
         for casedata in testcases:
             self.assertEqual(
                 numinwords(casedata["test"],
-                          lang=testlang,
-                          to=casedata["to"]),
+                           lang=testlang,
+                           to=casedata["to"]),
                 casedata["expected"])

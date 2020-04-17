@@ -84,11 +84,11 @@ class numinwordsCZTest(TestCase):
             "tisíc dvěstě třicet čtyři koruny, padesát šest haléřů")
         self.assertEqual(
             numinwords(101.11, lang='cz', to='currency', currency='EUR',
-                      separator=' a'),
+                       separator=' a'),
             "sto jedna euro a jedenáct centů")
         self.assertEqual(
             numinwords(101.21, lang='cz', to='currency', currency='CZK',
-                      separator=' a'),
+                       separator=' a'),
             "sto jedna korun a dvacet jedna haléřů"
         )
         self.assertEqual(
@@ -97,7 +97,7 @@ class numinwordsCZTest(TestCase):
         )
         self.assertEqual(
             numinwords(123.50, lang='cz', to='currency', currency='CZK',
-                      separator=' a'),
+                       separator=' a'),
             "sto dvacet tři koruny a padesát haléřů"
         )
         self.assertEqual(
