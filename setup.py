@@ -65,12 +65,12 @@ setup(
     license='LGPL',
     author='Taro Ogawa <tso at users sourceforge net>',
     author_email='tos@users.sourceforge.net',
-    maintainer='Savoir-faire Linux inc.',
-    maintainer_email='istvan.szalai@savoirfairelinux.com',
+    maintainer='m.m@sihaysistema.com SIHAYSISTEMA',
+    maintainer_email='m.m@sihaysistema.com',
     keywords=' number word numbers words convert conversion i18n '
              'localisation localization internationalisation '
              'internationalization',
-    url='https://github.com/savoirfairelinux/numinwords',
+    url='https://github.com/sihaysistema/numinwords',
     packages=find_packages(exclude=['tests']),
     test_suite='tests',
     classifiers=CLASSIFIERS,
