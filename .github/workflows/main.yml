@@ -10,16 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 4
+      max-parallel: 3
       matrix:
-        include:
-          - { python: 3.6, env: TOXENV=flake8 }
-          - { python: 3.6, env: TOXENV=isort }
-          # Py37 requires xenial distrubution and sudo
-          # See travis-ci/travis-ci#9069
-          - { python: 3.7, dist: xenial, sudo: true }
-        python-version: [2.7, 3.5, 3.6, 3.7]
-
+        python-version: [2.7, 3.6, 3.7]
     steps:
     - uses: actions/checkout@v1
     - name: Set up Python ${{ matrix.python-version }}
